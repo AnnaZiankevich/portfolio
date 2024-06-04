@@ -1,0 +1,42 @@
+$title-height: 48px;
+$main-height: 16px;
+
+$semibild: 600;
+$regular: 400;
+
+$line-height: 110%;
+
+@mixin typography() {
+    line-height: $line-height;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin h1_bold() {
+    @include typography();
+
+    font-size: $title-height;
+    font-weight: $semibild;
+}
+
+@mixin h1_regular() {
+    @include typography();
+
+    font-size: $title-height;
+    font-weight: $regular;
+}
+
+@mixin text1() {
+    @include typography();
+
+    font-size: $main-height;
+    font-weight: $semibild;
+}
+
+@mixin text2() {
+    @include typography();
+
+    font-size: $main-height;
+    font-weight: $regular;
+    line-height: 130%;
+}

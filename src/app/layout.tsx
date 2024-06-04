@@ -4,7 +4,7 @@ import classNames from "classnames";
 import "./globals.css";
 
 const poppins = Poppins({
-  weight: '400',
+  weight: ['400', '600'],
   subsets: ['latin'],
   display: 'swap',
   style: 'normal',

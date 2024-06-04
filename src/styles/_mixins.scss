@@ -1,0 +1,45 @@
+@use './typography' as t;
+@use './colors' as c;
+
+$main-border-radius: 8px;
+$second-border-radius: 4px;
+
+@mixin layout() {
+    padding: 145px 145px;
+    max-width: 1152px;
+}
+
+@mixin button() {
+    @include t.text2();
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 19px;
+    color: c.$accentBlack;
+    border-radius: $main-border-radius;
+    background-color: c.$accentMint;
+
+    &:hover {
+        background-color: c.$hoverMint;
+    }
+
+    &:focus {
+        background-color: c.$pressedMint;
+    }
+}
+
+@mixin nav-item() {
+    @include t.text1();
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $second-border-radius;
+    color: c.$accentBlack;
+    background-color: $navWhite;
+
+    &:hover, &.active {
+        background-color: $gray;
+    }
+}
