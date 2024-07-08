@@ -9,8 +9,16 @@ $second-border-radius: 4px;
     max-width: 1152px;
 }
 
+@mixin animation {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
 @mixin button() {
     @include t.text2();
+    @include animation();
 
     display: flex;
     align-items: center;
@@ -31,6 +39,7 @@ $second-border-radius: 4px;
 
 @mixin nav-item() {
     @include t.text1();
+    @include animation();
 
     display: flex;
     align-items: center;
