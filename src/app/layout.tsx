@@ -5,14 +5,6 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ['400', '600'],
-  subsets: ['latin'],
-  display: 'swap',
-  style: 'normal',
-  variable: '--Poppins'
-})
-
 export const metadata: Metadata = {
   title: "Anna Ziankevich - Frontend Developer💻",
   description: "React Next TypeScript JavaScript",
@@ -25,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={classNames(poppins.className, )}>
+      <body>
         <Header />
         {children}
         <Footer />

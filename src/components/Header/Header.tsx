@@ -1,7 +1,6 @@
 import styles from "./header.module.scss";
 import NavItem from "../NavItem/NavItem";
 import Button from "../Button/Button";
-import download from '../../assets/download.svg';
 import resume from '../../assets/Resume_Ziankevich.pdf';
 
 const Header = () => {

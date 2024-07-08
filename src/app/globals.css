@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&display=swap&subset=cyrillic');
+
+:root {
+  --Golos: 'Golos Text';
+}
+
 /* 
 ---------------------------------------------
 reset
@@ -80,6 +86,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: #F5F5F5;
+  font-family: var(--Golos);
 }
 
 ul,

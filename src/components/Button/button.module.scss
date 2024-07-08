@@ -6,6 +6,11 @@
     @include m.button();
     cursor: pointer;
 
+    .title {
+        @include t.text2();
+        color: c.$accentBlack;
+    }
+
     img {
         height: 20px;
         width: 20px;
