@@ -1,0 +1,13 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.body {
+    @include m.button();
+    cursor: pointer;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    padding: 0px 145px;
+
+    .content {
+        background-color: c.$navWhite;
+        border-radius: m.$main-border-radius;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 32px;
+
+        .nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+    }
+}
