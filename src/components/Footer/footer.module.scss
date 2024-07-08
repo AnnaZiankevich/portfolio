@@ -1,0 +1,20 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.footer {
+    width: 100%;
+    padding: 20px 145px;
+    background-color: c.$accentBlack;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+
+        .info {
+            @include t.text2();
+
+            color: c.$pastelWhite;
+        }
+    }
+}
