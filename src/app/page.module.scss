@@ -58,9 +58,34 @@
 
         .technologies_block__content {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 55px;
+            grid-template-columns: repeat(5, 186px);
             grid-row-gap: 35px;
+            justify-content: space-between;
+
+            @media only screen
+            and (max-device-width: 1290px) {
+                grid-template-columns: repeat(4, 186px);
+            }
+
+            @media only screen
+            and (max-device-width: 1070px) {
+                grid-template-columns: repeat(3, 186px);
+            }
+
+            @media only screen
+            and (max-device-width: 870px) {
+                grid-template-columns: repeat(2, 186px);
+            }
+
+            @media only screen
+            and (max-device-width: 870px) {
+                grid-template-columns: repeat(2, 186px);
+            }
+            
+            @media only screen
+            and (max-device-width: 685px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
 
             .technologies_block__item {
                 @include m.animation();
@@ -75,6 +100,12 @@
                 gap: 32px;
                 border: 2px solid c.$accentBlack;
                 border-radius: 8px;
+
+                @media only screen
+                and (max-device-width: 685px) {
+                    width: 100%;
+                    height: 186px;
+                }
 
                 img {
                     width: 56px;
@@ -184,6 +215,89 @@
                         text-decoration: underline!important;
                         color: c.$pastelWhite;
                     }
+                }
+            }
+        }
+    }
+
+    .education_block {
+        padding: 145px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+
+        .education_block__title {
+            @include t.h1_bold();
+            color: c.$accentBlack;
+        }
+
+        .education_block__content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .education_block__info {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .education_block__item {
+                    display: flex;
+                    min-height: 124px;
+                    justify-content: space-between;
+                    border: 1px solid c.$accentBlack;
+                    border-radius: 8px;
+                    padding: 20px 24px;
+                    color: c.$accentBlack;
+
+                    .item__place {
+                        display: flex;
+                        gap: 25px;
+                        align-items: center;
+                        max-width: 560px;
+
+                        .item__place_icon {
+                            @include m.animation();
+
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 4px;
+                            border: 3px solid transparent;
+                        }
+
+                        .item__place_name {
+                            @include t.h1_bold();
+                            font-size: 24px;
+                            line-height: 110%;
+                            color: c.$accentBlack;
+                        }
+
+                        &:hover .item__place_icon {
+                            border: 3px solid c.$accentMint;
+                        }
+                    }
+
+                    .item__info {
+                        max-width: 530px;
+                        text-align: right;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            .education_block__languages {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .education_block__language {
+                    @include t.h1_bold();
+                    font-size: 34px;
+                    line-height: 110%;
+                    color: c.$accentBlack;
                 }
             }
         }

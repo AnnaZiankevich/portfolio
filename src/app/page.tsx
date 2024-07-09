@@ -1,4 +1,5 @@
-import styles from "./page.module.scss";
+import styles from "./page.module.scss"
+import Button from "../components/Button/Button"
 import startImage from '../assets/main-img.svg'
 import telegram1 from '../assets/telegram1.svg'
 import gmail1 from '../assets/gmail1.svg'
@@ -18,6 +19,9 @@ import { ExperienceCalculator } from "../helpers/helpers"
 import fintech from '../assets/fintech.png'
 import pnpl from '../assets/pineapple practice.png'
 import dr from '../assets/dom rebenka.png'
+import bsuir from'../assets/bsuir.svg'
+import mgtk from '../assets/mgtk.svg'
+import itilogia from '../assets/itilogia.svg'
 
 export default function Home() {
   const periods = [
@@ -122,7 +126,7 @@ export default function Home() {
           <div className={styles.experience_block__item}>
             <div className={styles.experience_block__item_header}>
               <div className={styles.experience_block__item_company}>
-                <a href="https://minefintech.com/ru.html">
+                <a href="https://minefintech.com/ru.html" target="_blank">
                   <img className={styles.company__icon} 
                        src={fintech.src}
                   />
@@ -147,7 +151,7 @@ export default function Home() {
           <div className={styles.experience_block__item}>
             <div className={styles.experience_block__item_header}>
               <div className={styles.experience_block__item_company}>
-                <a href="https://pnpl.site/">
+                <a href="https://pnpl.site/" target="_blank">
                   <img className={styles.company__icon} 
                        src={pnpl.src}
                   />
@@ -171,7 +175,7 @@ export default function Home() {
               дашборды, проектирование и создание бизнес-логики курсов, уроков и тестов. Для 
               взаимодействия с backend использовала Swagger и Axios.
               <br/><br/>
-              Ссылка на итоговый проект: <a href="https://front.education.pnpl.tech/">
+              Ссылка на итоговый проект: <a href="https://front.education.pnpl.tech/" target="_blank">
                 https://front.education.pnpl.tech/
               </a>
             </div>
@@ -180,7 +184,7 @@ export default function Home() {
           <div className={styles.experience_block__item}>
             <div className={styles.experience_block__item_header}>
               <div className={styles.experience_block__item_company}>
-                <a href="http://domrebenkaminsk.by/">
+                <a href="http://domrebenkaminsk.by/" target="_blank">
                   <img className={styles.company__icon} 
                        src={dr.src}
                   />
@@ -200,9 +204,84 @@ export default function Home() {
               После завершения разработки проводилось тестирование и запуск проекта. Кроме того, 
               обеспечивалась поддержка и регулярное обновление сайта.
               <br/><br/>
-              Ссылка на итоговый проект: <a href="http://domrebenkaminsk.by/">
+              Ссылка на итоговый проект: <a href="http://domrebenkaminsk.by/" target="_blank">
                 http://domrebenkaminsk.by/
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.education_block}>
+        <div className={styles.education_block__title}>Образование</div>
+        <div className={styles.education_block__content}>
+          <div className={styles.education_block__info}>
+            <div className={styles.education_block__item}>
+              <a className={styles.item__place} href="https://www.bsuir.by/" target="_blank">
+                <img className={styles.item__place_icon} 
+                     src={bsuir.src}
+                />
+                <div className={styles.item__place_name}>
+                  Белорусский государственный<br/>
+                  университет информатики и радиоэлектроники
+                </div>
+              </a>
+              <div className={styles.item__info}>
+                <div className={styles.item__education}>
+                  Программное обеспечение информационных технологий
+                </div>
+                <div className={styles.item__ed_data}>
+                  2022 - 2026
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.education_block__item}>
+              <a className={styles.item__place} href="http://mstc.bntu.by/ru/" target="_blank">
+                <img className={styles.item__place_icon} 
+                     src={mgtk.src}
+                />
+                <div className={styles.item__place_name}>
+                  Минский государственный технологический колледж
+                </div>
+              </a>
+              <div className={styles.item__info}>
+                <div className={styles.item__education}>
+                  Программное обеспечение информационных технологий, 
+                  компьютерная графика
+                </div>
+                <div className={styles.item__ed_data}>
+                  2018 - 2022
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.education_block__item}>
+              <a className={styles.item__place} href="https://itlogia.ru/" target="_blank">
+                <img className={styles.item__place_icon} 
+                     src={itilogia.src}
+                />
+                <div className={styles.item__place_name}>
+                  АЙТИЛОГИЯ
+                </div>
+              </a>
+              <div className={styles.item__info}>
+                <div className={styles.item__education}>
+                  ИНТЕНСИВ UX/UI Start
+                </div>
+                <div className={styles.item__ed_data}>
+                  <a href="https://itlogia.ru//upload/images/intensive-participant-certificate/1696931000Jn7Jc.jpeg" target="_blank">
+                    <Button title="Смотреть сертификат" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.education_block__languages}>
+            <div className={styles.education_block__language}>
+              Английский - C1
+            </div>
+            <div className={styles.education_block__language}>
+              Белорусский, русский - родные
             </div>
           </div>
         </div>

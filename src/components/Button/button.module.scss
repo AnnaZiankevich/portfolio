@@ -8,6 +8,8 @@
 
     .title {
         @include t.text2();
+        font-family: 'Golos Text';
+        font-weight: 500;
         color: c.$accentBlack;
     }
 
