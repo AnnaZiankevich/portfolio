@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import styles from "./page.module.scss"
 import Button from "../components/Button/Button"
 import startImage from '../assets/main-img.svg'
@@ -27,13 +30,18 @@ import gmail from '../assets/gmail.svg'
 import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
 import contactImage from '../assets/phone book.svg'
+import dynamic from 'next/dynamic';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });;
 
 export default function Home() {
+
   const periods = [
     { start: '2022-06', end: '2024-01' },
     { start: '2023-08', end: '2024-03' },
     { start: '2024-02', end: 'сейчас' },
-  ];
+  ];  
 
   const technologies = [
     {
@@ -78,8 +86,45 @@ export default function Home() {
     },
   ]
 
+  const Responsive = {
+    0: {
+      items: 1,
+      margin: 0,
+    },
+    1024: {
+      items: 1,
+      margin: 0,
+    }
+  }
+
+  if (typeof window === 'undefined') {
+    console.log("window.innerHeight"); // Render nothing on the server
+  }
+
+  const useDeviceSize = () => {
+
+    const [width, setWidth] = useState(0)
+    const [height, setHeight] = useState(0)
+  
+    const handleWindowResize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    }
+  
+    useEffect(() => {
+      // component is mounted and window is available
+      handleWindowResize();
+      window.addEventListener('resize', handleWindowResize);
+      // unsubscribe from the event on component unmount
+      return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
+  
+    return [width, height]
+  
+  }
+
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <div className={styles.start_block}>
         <div className={styles.start_block__main_info}>
           <div className={styles.start_block__header}>
@@ -291,6 +336,32 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles.portfolio_block}>
+        <OwlCarousel className='owl-theme'  
+                    //  margin={10} 
+                     nav
+                     responsive={Responsive}
+        >
+          <div className={styles.item}>
+              <div>1</div>
+          </div>
+          <div className={styles.item}>
+              <div>2</div>
+          </div>
+          <div className={styles.item}>
+              <div>3</div>
+          </div>
+          <div className={styles.item}>
+              <div>4</div>
+          </div>
+          <div className={styles.item}>
+              <div>5</div>
+          </div>
+          <div className={styles.item}>
+              <div>6</div>
+          </div>
+        </OwlCarousel>
+      </div>
       <div className={styles.contact_block}>
         <img className={styles.contact_block__image} 
              src={contactImage.src}
@@ -358,6 +429,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

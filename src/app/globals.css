@@ -113,3 +113,77 @@ h6 {
 ul {
   margin-bottom: 0px;
 }
+
+.owl-carousel {
+  margin: 0 auto;
+}
+
+html
+body .owl-carousel .owl-nav button.owl-prev, html
+body .owl-carousel .owl-nav button.owl-next {
+  /* padding: 15px 15px!important; */
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  margin: 0px!important;
+}
+
+.owl-prev {
+  position: absolute;
+  left: 0px;
+  padding: 15px 10px!important;
+  top: 179px;
+  background: rgba(113, 113, 122, 0.33)
+      url('/assets/icon-right.svg') no-repeat 53% 58%  !important;
+  background-position: top center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.owl-prev:hover {
+  background: rgba(132, 220, 207, 0.8)
+      url('/assets/icon-right.svg') no-repeat 53% 58%  !important;
+  background-position: top center;
+}
+
+
+.owl-prev.disabled:hover {
+  background: rgba(113, 113, 122, 0.33)
+  url('/assets/icon-right.svg') no-repeat 53% 58% !important;
+}
+
+.owl-next {
+  position: absolute;
+  right: 0px;
+  top: 179px;
+  background: rgba(113, 113, 122, 0.33)
+  url('/assets/icon-left.svg') no-repeat 53% 58% !important;
+  background-position: top center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.owl-next:hover {
+  background: rgba(132, 220, 207, 0.8)
+  url('/assets/icon-left.svg') no-repeat 53% 58% !important;
+}
+
+.owl-next.disabled:hover {
+  background: rgba(113, 113, 122, 0.33)
+  url('/assets/icon-left.svg') no-repeat 53% 58% !important;
+}
+
+.owl-nav button.owl-prev, button.owl-next {
+  padding: 15px 10px!important;
+  border-radius: 8px!important;
+}
+
+.owl-next span, .owl-prev span {
+  visibility: hidden;
+}

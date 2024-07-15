@@ -1,3 +1,5 @@
+import webpack from "webpack";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "standalone",
@@ -15,6 +17,12 @@ const nextConfig = {
         },
       ],
     });
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+   }));
     return config;
   },
 };

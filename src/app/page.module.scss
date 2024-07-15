@@ -369,5 +369,24 @@
             }
         }
     }
+
+    .portfolio_block {
+        padding: 145px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item {
+            width: 100%;
+            min-height: 397px;
+            padding: 0px 50px;
+
+            div {
+                background-color: aquamarine;
+                height: 100%;
+            }
+        }
+    }
 }
 
