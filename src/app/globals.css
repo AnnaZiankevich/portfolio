@@ -121,7 +121,6 @@ ul {
 html
 body .owl-carousel .owl-nav button.owl-prev, html
 body .owl-carousel .owl-nav button.owl-next {
-  /* padding: 15px 15px!important; */
   min-width: 40px;
   min-height: 40px;
 }
@@ -186,4 +185,23 @@ body .owl-carousel .owl-nav button.owl-next {
 
 .owl-next span, .owl-prev span {
   visibility: hidden;
+}
+
+.owl-theme .owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  gap: 10px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #F5F5F5!important;
+  margin: 0px!important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 15px!important;
+  height: 15px!important;
+  background: #84DCCF!important;
+  margin: 0px!important;
 }
