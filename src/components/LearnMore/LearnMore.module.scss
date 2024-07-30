@@ -1,0 +1,22 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    .button {
+        @include t.text2();
+        display: flex;
+        gap: 10px;
+        color: c.$pastelWhite;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

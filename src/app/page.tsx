@@ -33,6 +33,9 @@ import contactImage from '../assets/phone book.svg'
 import dynamic from 'next/dynamic';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import cleverhub from '../assets/cleverhub.png'
+import LearnMore from '../components/LearnMore/LearnMore';
+import CleverHub from './CleverHub/CleverHub';
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });;
 
 export default function Home() {
@@ -338,14 +341,26 @@ export default function Home() {
       </div>
       <div className={styles.portfolio_block}>
         <OwlCarousel className='owl-theme'  
-                    //  margin={10} 
                      nav
                      responsive={Responsive}
         >
           <div className={styles.item}>
-              <div>1</div>
+              <img src={cleverhub.src} alt="" />
+              <div className={styles.item__content}>
+                <div className={styles.item__header}>
+                  <h1 className={styles.item__title}>01</h1>
+                  <div className={styles.item__name}>
+                    CLEVER HUB - обучение и тестирование сотрудников
+                  </div>
+                </div>
+                <div className={styles.item__info}>
+                  <div className={styles.item__text}>
+                    <LearnMore MoreInfo={CleverHub} />
+                  </div>
+                </div>
+              </div>
           </div>
-          <div className={styles.item}>
+          {/* <div className={styles.item}>
               <div>2</div>
           </div>
           <div className={styles.item}>
@@ -359,7 +374,7 @@ export default function Home() {
           </div>
           <div className={styles.item}>
               <div>6</div>
-          </div>
+          </div> */}
         </OwlCarousel>
       </div>
       <div className={styles.contact_block}>
