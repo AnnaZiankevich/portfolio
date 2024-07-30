@@ -15,6 +15,7 @@
         color: c.$pastelWhite;
 
         img {
+            @include m.animation();
             width: 24px;
             height: 24px;
         }

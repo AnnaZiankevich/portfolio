@@ -16,7 +16,7 @@ const LearnMore: FC<LearnMoreProps> = ({ MoreInfo }) => {
     return (
       <div className={styles.content}>
         <div style={{ cursor: 'pointer' }} onClick={toggleMoreInfo} className={styles.button}>
-            <img src={chevron.src} alt="chevron" style={{transform: 'rotate(' + isOpen ? '180' : '0' + ')'}} />
+            <img src={chevron.src} alt="chevron" style={{ transform: `rotate(${isOpen ? '180deg' : '0deg'})` }} />
             Узнать больше о проекте 
         </div>
         {isOpen && <MoreInfo />}
