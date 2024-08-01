@@ -40,6 +40,12 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 
 export default function Home() {
 
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleMoreInfo = () => {
+    setIsOpen(prev => !prev);
+  };
+
   const periods = [
     { start: '2022-06', end: '2024-01' },
     { start: '2023-08', end: '2024-03' },
@@ -101,7 +107,7 @@ export default function Home() {
   }
 
   if (typeof window === 'undefined') {
-    console.log("window.innerHeight"); // Render nothing on the server
+    console.log("window.innerHeight");
   }
 
   const useDeviceSize = () => {
@@ -115,10 +121,8 @@ export default function Home() {
     }
   
     useEffect(() => {
-      // component is mounted and window is available
       handleWindowResize();
       window.addEventListener('resize', handleWindowResize);
-      // unsubscribe from the event on component unmount
       return () => window.removeEventListener('resize', handleWindowResize);
     }, []);
   
@@ -345,7 +349,7 @@ export default function Home() {
                      responsive={Responsive}
         >
           <div className={styles.item}>
-              <img src={cleverhub.src} alt="" />
+              <img src={cleverhub.src} alt="cleverhub" className={styles.item__cover} />
               <div className={styles.item__content}>
                 <div className={styles.item__header}>
                   <h1 className={styles.item__title}>01</h1>
@@ -355,12 +359,19 @@ export default function Home() {
                 </div>
                 <div className={styles.item__info}>
                   <div className={styles.item__text}>
-                    <LearnMore MoreInfo={CleverHub} />
+                    Clever Hub  - современное веб-приложение, которое предоставляет простой и удобный способ 
+                    создания и назначения учебных курсов для сотрудников. Администраторы могут легко 
+                    оценивать компетентность своих подчиненных на основе результатов тестов. В то же время, 
+                    каждый сотрудник получает возможность сохранять и совершенствовать свои навыки 
+                    благодаря актуальности предлагаемых курсов.
+                  </div>
+                  <div onClick={toggleMoreInfo}>
+                    <LearnMore isOpen={isOpen} />
                   </div>
                 </div>
               </div>
           </div>
-          {/* <div className={styles.item}>
+          <div className={styles.item}>
               <div>2</div>
           </div>
           <div className={styles.item}>
@@ -374,8 +385,9 @@ export default function Home() {
           </div>
           <div className={styles.item}>
               <div>6</div>
-          </div> */}
+          </div>
         </OwlCarousel>
+        {isOpen && <CleverHub />}
       </div>
       <div className={styles.contact_block}>
         <img className={styles.contact_block__image} 

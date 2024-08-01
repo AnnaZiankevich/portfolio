@@ -3,23 +3,20 @@ import styles from "./LearnMore.module.scss"
 import chevron from '../../assets/chevron-down.svg'
 
 interface LearnMoreProps {
-  MoreInfo: ComponentType<any>; 
+  isOpen: boolean;
 }
 
-const LearnMore: FC<LearnMoreProps> = ({ MoreInfo }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const LearnMore: FC<LearnMoreProps> = ({ isOpen }) => {
 
-    const toggleMoreInfo = () => {
-        setIsOpen(!isOpen);
-    };
+  console.log(isOpen);
+  
 
     return (
       <div className={styles.content}>
-        <div style={{ cursor: 'pointer' }} onClick={toggleMoreInfo} className={styles.button}>
+        <div style={{ cursor: 'pointer' }} className={styles.button}>
             <img src={chevron.src} alt="chevron" style={{ transform: `rotate(${isOpen ? '180deg' : '0deg'})` }} />
             Узнать больше о проекте 
         </div>
-        {isOpen && <MoreInfo />}
       </div>
     );
 };
