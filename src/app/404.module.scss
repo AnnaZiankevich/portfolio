@@ -1,0 +1,54 @@
+@use '../styles/typography' as t;
+@use '../styles/colors' as c;
+@use '../styles/mixins' as m;
+
+.content {
+    padding: 145px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .cat {
+        padding-top: 100px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        img {
+            max-width: 40%;
+        }
+
+        &::before{
+            @include t.typography();
+            font-size: 250px;
+            content: '4';
+            margin-top: 10px;
+        }
+
+        &::after {
+            @include t.typography();
+            font-size: 250px;
+            content: '4';
+            margin-top: 10px;
+            margin-left: -40px;
+        }
+    }
+
+    .main {
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .main__title {
+            @include t.typography();
+            font-size: 72px;
+            font-weight: 600;
+        }
+    }
+}
