@@ -1,0 +1,66 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.contact_block {
+    padding: 145px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen
+    and (min-device-width: 1480px) {
+        max-width: 1450px;
+    }
+
+    .contact_block__content {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+
+        .contact_block__title {
+            @include t.h1_bold();
+            color: c.$accentBlack;
+        }
+
+        .contact_block__info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .contact_block__text {
+                @include t.text2();
+                color: c.$accentBlack;
+            }
+
+            .contact_block__contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .contact_block__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .item__icon {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    .item__info {
+                        @include t.text1();
+                        color: c.$accentBlack;
+
+                        a {
+                            @include t.text1();
+                            color: c.$accentBlack;
+                            text-decoration: underline!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

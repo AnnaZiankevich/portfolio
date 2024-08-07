@@ -1,0 +1,44 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.start_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: m.$block-padding;
+    margin-top: 160px;
+
+    .start_block__main_info {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        max-width: 710px;
+
+        .start_block__header {
+            @include t.h1_regular();
+            color: c.$accentBlack;
+
+            span {
+                @include t.h1_bold();
+                color: c.$accentBlack;
+            }
+        }
+
+        .start_block__text {
+            @include t.text2();
+            color: c.$accentBlack;
+        }
+
+        .start_block__icons {
+            display: flex;
+            gap: 32px;
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}
