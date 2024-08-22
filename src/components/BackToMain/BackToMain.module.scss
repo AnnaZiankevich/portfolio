@@ -1,0 +1,23 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+
+    &:hover span {
+        text-decoration: underline;
+    }
+    
+    img {
+        width: 30px;
+        height: auto;
+    }
+
+    span {
+        color: c.$accentBlack;
+    }
+}
