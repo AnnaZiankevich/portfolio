@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from "./portfolio-block.module.scss";
 import cleverhub from '../../assets/cleverhub.png';
 import moodhub from '../../assets/moodhub.png'
@@ -14,46 +15,56 @@ const PortfolioBlock = () => {
       id: 'cleverhub',
       link: '',
       image: cleverhub,
+      href: '/cleverhub',
     },
     {
       id: 'moodhub',
       link: '',
       image: moodhub,
+      href: '/moodhub',
     },
     {
       id: 'smarter',
       link: '',
       image: smarter,
+      href: '/smarter',
     },
     {
       id: 'transithub',
       link: '',
       image: transithub,
+      href: '/transithub',
     },
     {
       id: 'domrebenka',
       link: '',
       image: domrebenka,
+      href: '/domrebenka',
     },
   ]
 
   return (
     <div className={styles.portfolio_block}>
       <div className={styles.portfolio_block__title}>Мои проекты</div>
-
       <div className={styles.items}>
         {projects.map(item => (
-            <div className={styles.item} key={item.id}>
+            <Link 
+              className={styles.item} 
+              key={item.id}
+              href={item.href}
+            >
               <div className={styles.link}>
-                
+                <Image
+                  src={link}
+                  alt='link'
+                />
               </div>
               <Image 
                    src={item.image} 
                    alt={item.id} 
                    className={styles.item__cover}
-                   layout="responsive" 
               />
-            </div>
+            </Link>
         ))}
       </div>
     </div>
