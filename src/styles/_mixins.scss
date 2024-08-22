@@ -1,14 +1,16 @@
 @use './typography' as t;
 @use './colors' as c;
 
+$main-width: 1200px;
+
 $main-border-radius: 8px;
 $second-border-radius: 4px;
 
 $block-padding: 0px 145px 110px 145px;
 
 @mixin layout() {
-    padding: 145px 145px;
-    max-width: 1152px;
+    padding: 145px;
+    max-width: 1200px;
 }
 
 @mixin animation {

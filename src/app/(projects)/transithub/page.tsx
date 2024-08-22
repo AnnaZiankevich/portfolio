@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from "./TransitHub.module.scss"
+import styles from "./page.module.scss"
 
-const CleverHub = () => {
+const TransitHub = () => {
     return (
       <div className={styles.content}>
         
@@ -9,4 +9,4 @@ const CleverHub = () => {
     );
 };
 
-export default CleverHub;
+export default TransitHub;

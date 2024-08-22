@@ -16,61 +16,30 @@
         color: c.$pastelWhite;
     }
 
-    .item {
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
+    .items {
+        display: grid;
         width: 100%;
-        max-width: 1150px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
 
-        .item__body {
-            display: flex;
-            justify-content: space-between;
-            min-height: 397px;
-            padding: 0px 50px;
-            justify-self: center;
+        .item {    
+            width: 100%;
+            height: auto;
 
-            .item__cover {
-                width: 100%!important;
-                height: auto!important;
-                object-fit: contain!important;
+            img {
+                width: 100%;
+                height: auto;
             }
+        }
 
-            .item__content {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                // gap: 40px;
-                padding-left: 21px;
+        @media only screen
+        and (max-device-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-                .item__header {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    color: c.$pastelWhite;
-
-                    .item__title {
-                        @include t.h1_bold();
-                    }
-
-                    .item__name {
-                        font-size: 34px;
-                        line-height: 110%;
-                        font-weight: bold;
-                    }
-                }
-
-                .item__info {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-
-                    .item__text {
-                        @include t.text2();
-                        color: c.$gray;
-                    }
-                }
-            }
+        @media only screen
+        and (max-device-width: 1000px) {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
