@@ -3,5 +3,12 @@
 @use '../../../styles/mixins' as m;
 
 .content {
-    
+    @include m.layout();
+
+    gap: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }

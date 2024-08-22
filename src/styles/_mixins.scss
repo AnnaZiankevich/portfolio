@@ -9,8 +9,9 @@ $second-border-radius: 4px;
 $block-padding: 0px 145px 110px 145px;
 
 @mixin layout() {
+    display: flex;
+    flex-direction: column;
     padding: 145px;
-    max-width: 1200px;
 }
 
 @mixin animation {
