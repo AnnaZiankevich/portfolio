@@ -1,11 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from "./page.module.scss"
+import cleverhub from '../../../assets/cleverhub.png'
 import cleverhub1 from '../../../assets/cleverhub/cleverhub1.png'
 import cleverhub2 from '../../../assets/cleverhub/cleverhub2.png'
 import cleverhub3 from '../../../assets/cleverhub/cleverhub3.png'
 import cleverhub4 from '../../../assets/cleverhub/cleverhub4.png'
-import BackToMain from '../../../components/BackToMain/BackToMain';
+import cleverhub5 from '../../../assets/cleverhub/cleverhub5.jpg'
+import cleverhub6 from '../../../assets/cleverhub/cleverhub6.jpg'
+import cleverhub7 from '../../../assets/cleverhub/cleverhub7.jpg'
+import BackToMain from '../../../components/BackToMain/BackToMain'
+import ForwardLink from '../../../components/ForwardLink/ForwardLink';
 
 const CleverHub = () => {
     return (
@@ -18,6 +23,17 @@ const CleverHub = () => {
               и повышения уровня доверия клиентов. Оно помогает компаниям поддерживать свою репутацию 
               и достигать успеха в современном бизнесе.
             </p>
+            <p>
+              <b>
+                Стек: React, JavaScript, Redux, SCSS, Material UI, Vite, Axios, Chart.js, GitLab, Jira
+              </b>
+            </p>
+            <ForwardLink link={'https://front.education.pnpl.tech/'} />
+            <Image
+              src={cleverhub}
+              alt='cleverhub'
+              style={{maxWidth: '700px'}}
+            />
             <p>
               Основная функция - создание и назначение учебных курсов для каждого сотрудника. 
               Приложение позволяет контролировать процесс обучения и проверять компетентность своих 
@@ -55,6 +71,27 @@ const CleverHub = () => {
             <Image 
               src={cleverhub3}
               alt='cleverhub3'
+            />
+            <p>
+              Создание курса:
+            </p>
+            <Image 
+              src={cleverhub5}
+              alt='cleverhub6'
+            />
+            <p>
+              Уроки курса:
+            </p>
+            <Image 
+              src={cleverhub6}
+              alt='cleverhub6'
+            />
+                        <p>
+              Курсы у пользователя:
+            </p>
+            <Image 
+              src={cleverhub7}
+              alt='cleverhub7'
             />
           </div>
         <BackToMain />

@@ -8,6 +8,10 @@
     gap: 50px;
     color: c.$accentBlack;
 
+    h1 {
+        @include t.h1_bold();
+    }
+
     .info {
         display: flex;
         flex-direction: column;
@@ -16,6 +20,7 @@
         img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
         }
     }
 }
