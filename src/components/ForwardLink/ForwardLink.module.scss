@@ -1,0 +1,21 @@
+@use '../../styles/typography' as t;
+@use '../../styles/colors' as c;
+@use '../../styles/mixins' as m;
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .icon {
+        width: 15px!important;
+        height: 15px!important;
+        border-radius: 0px!important;
+    }
+
+    a {
+        @include t.text2();
+        color: c.$accentBlack; 
+        text-decoration: underline!important;
+    }
+}
