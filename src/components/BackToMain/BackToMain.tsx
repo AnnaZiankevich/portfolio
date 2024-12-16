@@ -6,7 +6,7 @@ import back from '../../assets/return.svg'
 
 const BackToMain = () => {
     return (
-        <Link href={'/'} className={styles.back}>
+        <Link href={'/#my-projects'} className={styles.back}>
             <Image 
                 src={back}
                 alt='back'

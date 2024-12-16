@@ -3,6 +3,7 @@ import webpack from "webpack";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "standalone",
+  // output: 'export',
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.pdf$/,
